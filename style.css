@@ -8,6 +8,40 @@ body {
   padding-bottom: 32px;
 }
 
+p{
+  margin-bottom: 12px;
+}
+
+h1,h2,h3{
+  margin-top: 0px;
+  font-weight: 400;
+}
+h1{
+font-size: 36px;
+margin-bottom: 0px;
+}
+h2{
+  font-size: 32px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 8px;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+/* добавил*/
+h5{
+  margin-bottom: 0px;
+}
+/* добавил*/
+#header{
+  margin-bottom: 32px;
+  text-align: center;
+}
+#footer{
+  margin-bottom: 64px;
+  text-align: center;
+}
 /* BEGIN (write your solution here) */
 
 /* END */
