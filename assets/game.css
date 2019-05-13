@@ -1,0 +1,33 @@
+#payt3 /*{display: none;}*/
+[for="payt3"] {
+  position: absolute;
+  display: block;
+  left: 10%; top: -10%;
+  
+  background: green;
+  cursor: pointer;
+}
+[for="payt3"]:after {
+  content: "";
+  position: absolute;
+  left: 10%; top: 10%;
+  width: 20%;
+  height: 40%;
+  border-radius: 50%;
+  background: red;
+
+}
+[for="payt3"]:before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 100%;
+  background: #eaeaea;
+
+}
+
+#payt3:checked ~ [for="payt3"]:after {
+  background: #25d025 radial-gradient(40% 35%, #5aef5a, #25d025 60%);
+  left: -50%; top: -50%;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<title>CssGame</title>
+	<meta http-equiv="Cache-Control" content="no-cache" />
+	<link rel="stylesheet" href="game.css">
+	
+</head>
+<body>
+<div style="background: url(assets/img/bg.png); position: absolute; right: 160px; bottom: 160px; width: 244px; height: 244px; border: 0px solid #CCA5D1; border-radius: 160px 160px 160px 160px; - webkit-border-radius: 160px 160px 160px 160px; -moz-border-radius: 160px 160px 160px 160px;"></div>
+<div style="background: url(assets/img/red.png); position: absolute; right: 700px; bottom: 700px; width: 100px; height: 100px; border: 0px solid #CCA5D1; border-radius: 160px 160px 160px 160px; - webkit-border-radius: 160px 160px 160px 160px; -moz-border-radius: 160px 160px 160px 160px;"></div>
+<div style="background: url(assets/img/bg.png); position: absolute; right: 480px; bottom: 480px; width: 244px; height: 244px; border: 0px solid #CCA5D1; border-radius: 160px 160px 160px 160px; - webkit-border-radius: 160px 160px 160px 160px; -moz-border-radius: 160px 160px 160px 160px;"></div>
+
+<input type="checkbox" id="payt3" checked>
+<p><span id="counter">5</span><span>       СЧЁТ: </span><span id="score">0</span></p>
+<label for="payt3"></label>
+
+<script type="text/javascript">
+function countdown() {
+    var i = document.getElementById('counter');
+    var s = document.getElementById('score');
+    var chk = document.getElementById('payt3');
+    
+    let x = Math.random() * (100 - 0) + 0;
+    
+    if (parseInt(i.innerHTML)==4) {
+        chk.checked = false;
+    }
+    if (parseInt(i.innerHTML)==2) {
+    		
+       
+        chk.style = "position: absolute; left: "+Math.random() * (50 - 0)+"%; top: "+Math.random() * (50 - 0)+"%";
+
+        chk.checked = true;
+    }
+    if (parseInt(i.innerHTML)<=1) {
+        
+        s.innerHTML = " GAME OVER";
+        clearInterval(intervalID);  
+    }
+    i.innerHTML = parseInt(i.innerHTML)-1;
+}
+
+var intervalID=setInterval(function(){ countdown(); },1000);
+
+</script>
+
+<!-- 
+https://jsfiddle.net/56rxd4at/ 
+https://toster.ru/q/353825
+-->	
+	
+</body>
+</html>
