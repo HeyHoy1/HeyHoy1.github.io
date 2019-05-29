@@ -1,71 +1,80 @@
-﻿<!-- BEGIN (write your solution here) -->
-<!DOCTYPE html> 
-<html lang="Ru-ru">
-    
-    <head>
+
+<link href="ball_maker.css" rel="stylesheet">
+
+<div class="demo">
+    <div class="demo__content">
+      
+      <svg class="svg svg--defs">  
+          
+          <!--Colors of bubble -->
+          <linearGradient id="grad"
+                x1="0" y1="100%" x2="100%" y2="0">
+              <stop offset="0%" stop-color="red" 
+                    class="stop-1"/>   
+
+          </linearGradient> 
         
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-        <title>Название заголовка</title>         
-    </head>
-    <body>
-<div id="header">
-    <h1>
-        Имя Фамилия
-    </h1>
-    <h3>
-        Специальность
-    </h3>
-    <p> 
-        <a href="mailto:xx@yy.zz">
-            xx@yy.zz</a>
-        ,    
-        <a href="https://heyhoy1.github.io/">
-            heyhoy1.github.io</a>
-    </p>
-</div>
-<div id="main">
-    Короткий вводный текст. <br><br> И ещё текст. 
-    <h2>
-        Опыт работы
-    </h2>
-    <h3>
-        Майкрософт?!? Программист (стажировка), апрель 2016 - ноябрь 2016 
-    </h3>
-    Апрель-ноябрь - не прошёл стажировку (не оставили после стажировки)? Курсы в Hexlet по ноябрь 2017 не позволяет предположить, что ноябрь 2016 г. это дата подачи резюме
-    <ul>
-        <li>Мне кажется без нормального опыта не возьмут даже стажёром</li>
-        <li>Хотя, наверное, было бы здорово</li>
-    </ul>
-    <h3>ТОО "Винная баня"</h3> 
-    Выглядит более реалистично (ТОО? Казахстан?)
-    <ul>
-        <li>И название классное</li>
-        <li>Хотелось бы посмотреть на веб-дизайн ТОО "Винная баня")))</li>
-    </ul>
-    <h2>
-        Образование
-    </h2>
-    <h3>Университет им. Патриса Лумумбы с 5 февраля 1992 года переименован и сейчас называется Российский университет дружбы народов
-        </h3>
-    Бакалавр информационных систем, 2012 - 2016
-    <br>
-    <h3>Хекслет</h3>
-    Курсы по программированию, JS Backend/Frontend, 2015 - 2017
-    <br>
-    <h2>
-        Другие навыки и увлечения
-    </h2>
-    <ul>
-        <li>Основы дизайна и типографики</li>
-        <li>Любительская игра на гитаре</li>
-        <li>Хоккей на траве (городская лига)</li>
-    </ul>
-</div>
-<div id="footer">
-    <h4>Имя Фамилия</h4> 
-    Адрес, +7 (222) 22-22-222, <a href="mailto:xx@yy.zz">mailto:xx@yy.zz</a>
-</div>
-    </body>
-</html>
-<!-- END -->
+      </svg>
+      
+      <div class="demo__defs hidden">
+          <svg class="svg bubble" viewBox="0 0 200 200">
+              <g class="bubble__group">
+                 
+                <ellipse rx="20%" ry="10%"
+                     cx="150" cy="150"
+                     fill="url(#grad--spot)"
+                     transform="rotate(-225, 150, 150)"
+                     class="shape _hidden"    
+                     ></ellipse>   
+                  
+                <circle r="50%" 
+                      cx="50%" cy="50%"
+                        
+                 
+                     
+                      class="shape _hidden"
+                      ></circle>
+                 
+                <circle r="50%" 
+                      cx="50%" cy="50%"
+                     
+                      ></circle>             
+                <ellipse rx="55" ry="25"
+                     cx="55" cy="55"
+                     fill="url(#grad--spot)"
+                     transform="rotate(-45, 55, 55)"
+                     class="shape _hidden"    
+                     ></ellipse> 
+                 
+                <circle r="50%" 
+                      cx="50%" cy="50%"
+                      fill="url(red)"
+                      mask="url(#mask)"
+                      class="shape _hidden"
+                      ></circle> 
+              </g>
+              
+              <use xlink:href="#splash" class="bubble__splash"/>
+                  
+          </svg>
+      </div>  
+      
+      <header class="demo__title demo-title">
+          <svg class="svg demo-title__splash" viewBox="0 0 200 200">
+              <use xlink:href="#splash"/>
+          </svg>
+          
+          
+          
+              
+              <p><span> СЧЁТ: </span><span id="score">0</span></p>
+      <span></span>
+      <h1 class="demo-title__content"></h1>
+          </h1>
+      </header> 
+    </div>
+  
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+<script src="ball_maker.js"></script>
