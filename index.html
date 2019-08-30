@@ -1,80 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add React in One Minute</title>
+  </head>
+  <body>
 
-<link href="ball_maker.css" rel="stylesheet">
+    <h2>Add React in One Minute</h2>
+    <p>This page demonstrates using React with no build tooling.</p>
+    <p>React is loaded as a script tag.</p>
 
-<div class="demo">
-    <div class="demo__content">
-      
-      <svg class="svg svg--defs">  
-          
-          <!--Colors of bubble -->
-          <linearGradient id="grad"
-                x1="0" y1="100%" x2="100%" y2="0">
-              <stop offset="0%" stop-color="red" 
-                    class="stop-1"/>   
+    <!-- We will put our React component inside this div. -->
+    <div id="like_button_container"></div>
 
-          </linearGradient> 
-        
-      </svg>
-      
-      <div class="demo__defs hidden">
-          <svg class="svg bubble" viewBox="0 0 200 200">
-              <g class="bubble__group">
-                 
-                <ellipse rx="20%" ry="10%"
-                     cx="150" cy="150"
-                     fill="url(#grad--spot)"
-                     transform="rotate(-225, 150, 150)"
-                     class="shape _hidden"    
-                     ></ellipse>   
-                  
-                <circle r="50%" 
-                      cx="50%" cy="50%"
-                        
-                 
-                     
-                      class="shape _hidden"
-                      ></circle>
-                 
-                <circle r="50%" 
-                      cx="50%" cy="50%"
-                     
-                      ></circle>             
-                <ellipse rx="55" ry="25"
-                     cx="55" cy="55"
-                     fill="url(#grad--spot)"
-                     transform="rotate(-45, 55, 55)"
-                     class="shape _hidden"    
-                     ></ellipse> 
-                 
-                <circle r="50%" 
-                      cx="50%" cy="50%"
-                      fill="url(red)"
-                      mask="url(#mask)"
-                      class="shape _hidden"
-                      ></circle> 
-              </g>
-              
-              <use xlink:href="#splash" class="bubble__splash"/>
-                  
-          </svg>
-      </div>  
-      
-      <header class="demo__title demo-title">
-          <svg class="svg demo-title__splash" viewBox="0 0 200 200">
-              <use xlink:href="#splash"/>
-          </svg>
-          
-          
-          
-              
-              <p><span> СЧЁТ: </span><span id="score">0</span></p>
-      <span></span>
-      <h1 class="demo-title__content"></h1>
-          </h1>
-      </header> 
-    </div>
-  
-  </div>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
-<script src="ball_maker.js"></script>
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+
+  </body>
+</html>
